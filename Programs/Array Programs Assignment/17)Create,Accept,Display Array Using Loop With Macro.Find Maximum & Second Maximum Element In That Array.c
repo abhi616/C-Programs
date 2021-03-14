@@ -4,7 +4,7 @@
 
 //Compiler version gcc  6.3.0
 
-int Find_FirstMaximum_SecondMaximum(int *P,int *Max,int *S_Max)
+void Find_FirstMaximum_SecondMaximum(int *P,int *Max,int *S_Max)
 {
   int j=0;
   

@@ -19,6 +19,8 @@ int main()
 
      if(Len1==Len2)
       {
+           //Find Count Of Each Letter Of First String
+
             for(i=0;Str1[i]!='\0';i++)
              {
                  
@@ -134,6 +136,8 @@ int main()
                  }
              }
 
+            //Find Count Of Each Letter Of Second String
+
             for(i=0;Str2[i]!='\0';i++)
              {
                switch(Str2[i])
@@ -247,6 +251,7 @@ int main()
                  }
              }
 
+         //Check Each Letter Count In Both Strings
 
             for(i=0;i<26;i++)
             {

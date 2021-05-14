@@ -1,3 +1,3 @@
 # C_Programs
 
-# C Practice Programs
+C Practice Programs

@@ -38,6 +38,11 @@ int main()
   printf("Enter Number: ");
   scanf("%d",&iNo);
   
+  if(iNo<0)
+  {
+    iNo=-iNo;
+  }
+  
   iRet=Is_Perfect_Number(iNo);
   
   if(iRet==1)

@@ -2,19 +2,24 @@
 #include<conio.h>
 
 //Compiler version gcc  6.3.0
+
 int main()
 {  
-  int n1,n2,n3; 
+  int N1,N2,N3; 
+
    up: 
     printf("Enter Three Numbers To Check Which Number Is Maximum:");
-    scanf("%d%d%d",&n1,&n2,&n3);
-     if(n1==n2&&n1==n3)
-       {
+    scanf("%d%d%d",&N1,&N2,&N3);
+
+    if(N1==N2&&N1==N3)
+      {
          printf("\nNumbers Are Equal...\n\n");
          goto up;
-       }
-  ((n1>n2)?(n1>n3)?printf("%d Is Maximum",n1):printf("%d Is Maximum",n3):(n2>n3)?printf("%d Is Maximum",n2):printf("%d Is Maximum",n3));
+      }
+
+   ((N1>N2)?(N1>N3)?printf("%d Is Maximum",N1):printf("%d Is Maximum",N3):(N2>N3)?printf("%d Is Maximum",N2):printf("%d Is Maximum",N3));
   
+  getch();
   return 0;
  }
   

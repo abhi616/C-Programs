@@ -23,9 +23,11 @@ int main()
         printf("Entered  Number %d Is Only Divisible By 7",no);
       }
     else
+     {
         printf("Entered Number %d Is Not Divisible By Both 5&7",no);
-  
-  gech();
+     }
+
+  getch();
   return 0;
  }
   

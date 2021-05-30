@@ -2,11 +2,14 @@
 #include<conio.h>
 
 //Compiler version gcc  6.3.0
+
 int main()
 {  
-  char ch;
+    char ch;
+
     printf("Enter Character To Check Character Is Lowercase/Uppercase/Digit/Special Symbol:");
-    ch=getchar();    
+    ch=getchar();  
+  
      if(ch>=65&&ch<=90)
        {
          printf("Entered Character '%c' Is Uppercase Character",ch);
@@ -20,7 +23,11 @@ int main()
         printf("Entered Character '%c' Is Digit",ch);
       }
     else
+     {
         printf("Entered Character '%c' Is Special Symbol",ch);
+     }
+
+  getch();
   return 0;
  }
   

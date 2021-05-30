@@ -15,7 +15,9 @@ int main()
         printf("%d Is Even Number",no);
       }
      else
+      {
         printf("%d Is Odd Number",no);  
+      }
 
   getch();     
   return 0;

@@ -2,11 +2,13 @@
 #include<conio.h>
 
 //Compiler version gcc  6.3.0
+
 int main()
 {  
   char ch;
     printf("Enter Character Between[(A-D)/(a-d)]:");
     scanf("%c",&ch); 
+
      switch(ch)
      {
        case 'A':
@@ -28,6 +30,8 @@ int main()
      default:
               printf("Thanks...");
     }
+
+  getch();
   return 0;
  }
   

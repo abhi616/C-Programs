@@ -5,7 +5,8 @@
 
 int main()
 {  
-  char ch;
+    char ch;
+
     printf("Enter Character Between[(A-D)/(a-d)]:");
     scanf("%c",&ch); 
 

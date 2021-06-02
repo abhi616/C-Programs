@@ -12,6 +12,7 @@ int main()
     scanf("%d",&n); 
 
    temp=n; 
+
    if(temp>=100 && temp<=999) 
     {
      for(;temp>0;temp=temp/10)
@@ -21,10 +22,10 @@ int main()
       }
     }
    else
-     {
+    {
       printf("\nEnter Valid 3 Digit Number....\n\n");
       goto up; 
-     }
+    }
 
    printf("\nSum Of Entered Number %d Is %d",n,sum);
   

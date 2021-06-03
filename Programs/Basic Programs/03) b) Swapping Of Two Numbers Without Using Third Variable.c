@@ -10,6 +10,7 @@ int main()
    scanf("%d%d",&no1,&no2);
 
    clrscr();
+
   printf("Before Swapping No1=%d & No2=%d",no1,no2);
 
      no1=no1+no2;

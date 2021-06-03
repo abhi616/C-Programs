@@ -2,13 +2,19 @@
 #include<conio.h>
 
 //Compiler version gcc  6.3.0
+
 int main()
 {  
-  char ch;  
+    char ch; 
+ 
     printf("Enter Character To Find Their Corresponding Ascii Value:");
     scanf("%c",&ch);
+
     clrscr();
+
     printf("\nAscii Value Of Given Character .%c. Is %d",ch,ch);
-  return 0;
+   
+    getch();
+    return 0;
  }
   

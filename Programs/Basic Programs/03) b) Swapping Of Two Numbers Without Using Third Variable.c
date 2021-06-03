@@ -5,15 +5,20 @@
 int main()
 { 
   int no1,no2; 
+
    printf("Enter Two Numbers For Swapping:");
    scanf("%d%d",&no1,&no2);
+
    clrscr();
   printf("Before Swapping No1=%d & No2=%d",no1,no2);
+
      no1=no1+no2;
      no2=no1-no2;
      no1=no1-no2;
+
   printf("\n\nAfter Swapping No1=%d & No2=%d\n",no1,no2);
 
+  getch();
   return 0;
  }
   

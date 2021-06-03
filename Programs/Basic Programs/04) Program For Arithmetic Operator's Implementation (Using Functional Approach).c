@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<conio.h>
 
-  int add(int,int);
-  int sub(int,int);
-  int mult(int,int);    
-  int div(int,int);
-  int mod(int,int);
+int add(int,int);
+int sub(int,int);
+int mult(int,int);    
+int div(int,int);
+int mod(int,int);
 
 int main()
 {
@@ -58,27 +58,27 @@ int main()
    return 0;
 }
 
- int add(int a,int b)
-  {
+int add(int a,int b)
+ {
    return(a+b);
-  }
+ }
 
- int sub(int a,int b)
-  {    
-      return(a-b);
-  }
+int sub(int a,int b)
+ {    
+    return(a-b);
+ }
 
-  int mult(int a,int b)
-   {
-     return(a*b);
-   }
+int mult(int a,int b)
+ {
+    return(a*b);
+ }
 
-  int div(int a,int b)
-   {
-     return(a/b);
-   }
+int div(int a,int b)
+ {
+    return(a/b);
+ }
  
-  int mod(int a,int b)
-   {
-     return(a%b);
-   }
+int mod(int a,int b)
+ {
+    return(a%b);
+ }

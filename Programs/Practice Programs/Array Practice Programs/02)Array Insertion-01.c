@@ -3,7 +3,7 @@
 
 //Compiler version gcc  6.3.0
 
- int Size,Cnt,i,j,Ret;    // Size Is For Taking Size Of Array & Cnt is For Taking Count Of Elements
+int Size,Cnt,i,j,Ret;    // Size Is For Taking Size Of Array & Cnt is For Taking Count Of Elements
    
 
 void Accept_Array_Elements(int F_Arr[])
@@ -35,10 +35,9 @@ void Accept_Array_Elements(int F_Arr[])
      for(;i<Size;i++)
      {
        F_Arr[i]=0;
-     }
+     }    
     
-    
-  }
+   }
 
   else
   {
@@ -57,13 +56,15 @@ void Display_Array_Elements(int F_Arr[])
 {
   // Display Array Elements
   printf("\nEntered Array Elements ==> \n\n");
-   for(i=0;i<Size;i++)
-   {
+   
+  for(i=0;i<Size;i++)
+  {
      printf("|%-3d",F_Arr[i]);
-   }
-   printf("|\n");
+  }
+  
+  printf("|\n");
 
-   return;
+  return;
 }
 
 

@@ -105,14 +105,14 @@ int Insert_New_Element(int f_Arr[])
          Temp[j]=f_Arr[Idx];
        }
        
-     // 
+     // This Loop is For To Insert New Element
       for(i=0;i<Size;i++)
       {
         if(i==Index)          // Here We Check If Entered Index Is Equal To i Then Our New Element Will Insert There
         {
           f_Arr[i]=New_N;      // Inserting New Element At That Index Where We Want To Insert
 
-          for(j=0;i<Size;i++,j++)    // For Coping Elements From Inserting Element Index.
+          for(j=0;i<Size;i++,j++)    // For Coping Elements From Inserting Element Index Or 2nd Array Elements To 1st Array Element.
           {
             f_Arr[i+1]=Temp[j];
           }
@@ -125,7 +125,7 @@ int Insert_New_Element(int f_Arr[])
         }
       }
       
-   }
+     }
 
    else
    {

@@ -187,7 +187,6 @@ int main()
      printf("\n\nThanks....!!!\n");
      
   }
-
  else
  {
      printf("\n**Size Must In Positive Number & Greater Than 0....!**\n");

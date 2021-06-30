@@ -85,10 +85,19 @@ int Insert_New_Element(int f_Arr[])
 
       Up:
       printf("\nWhere You Want To Insert Your New Element.Enter Index In Between(0-%d) : ",Obj.Size-1);
-      scanf("%d",&Index);
+      scanf("%d",&Index);     
 
-      if(Index>Obj.Size-1)
+      if(Index>Obj.Size-1||Index<0)       
       {
+        
+        if(Index<0)       // Handling Negative Input
+        {
+          printf("\n-------------------------------------------------------------\n");
+          printf("\nIndex Must Be In Positive Number.Enter Valid Index....!\n");
+          printf("\n-----------------------------------------------------------\n");
+          goto Up;
+        }
+       
         printf("\n-----------------------------------\n");
         
         printf("\nPlease Enter Valid Index...!\n");
@@ -148,40 +157,51 @@ int main()
 {
   printf("************************************************************\n");
   
+  up:
   printf("\nEnter Size Of Array : ");
   scanf("%d",&Obj.Size);
-
-  int Arr[Obj.Size];    // Declaring/Creating & Initialising Array
-
-  Accept_Array_Elements(&Arr);     // Accept Array Elements
-
-  printf("\n************************************************************\n");
   
-  printf("\nBack To main()...! Press Any Key\n");
-
-  getch();
+  if(Obj.Size>0)        // Handling Negative Input & Also In 0 Case Input Because Size Never In Zero Or In Negative.
+  {
+     int Arr[Obj.Size];    // Declaring/Creating & Initialising Array
   
-  printf("\n\n************************************************************\n");
+     Accept_Array_Elements(&Arr);     // Accept Array Elements
 
-  Display_Array_Elements(&Arr);      // Display Array Elements
-
-  printf("\n\n********************************************************************\n");
+     printf("\n************************************************************\n");
   
-  Obj.Ret=Insert_New_Element(&Arr);         // Insert New Element In An Array
+     printf("\nBack To main()...! Press Any Key\n");
 
-  fflush(stdin);
-
-  if(Obj.Ret==0)        //   This Will Only Work When We Insert New Element Otherwise Not.
-  { 
-      printf("\n\n***********************************************************************\n");  
+     getch();
   
-      Display_Array_Elements(&Arr);    // Again Display Array Elements
+     printf("\n\n************************************************************\n");
+
+     Display_Array_Elements(&Arr);      // Display Array Elements
+
+     printf("\n\n********************************************************************\n");
+  
+     Obj.Ret=Insert_New_Element(&Arr);         // Insert New Element In An Array
+
+     fflush(stdin);
+
+     if(Obj.Ret==0)        //   This Will Only Work When We Insert New Element Otherwise Not.
+     { 
+        printf("\n\n***********************************************************************\n");  
+  
+        Display_Array_Elements(&Arr);    // Again Display Array Elements
+     } 
+  
+     printf("\n*************************************************************\n");
+  
+     printf("\n\nThanks....!!!\n");
+     
+  }  
+ else
+  {
+    printf("\nSize Must Be Positive Number & Greater Than 0\n");
+    goto up;
   }
   
-  printf("\n*************************************************************\n");
   
-  printf("\n\nThanks....!!!\n");
-
   getch();
   return 0;
 }

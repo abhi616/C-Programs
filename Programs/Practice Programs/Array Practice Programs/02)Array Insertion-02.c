@@ -6,9 +6,7 @@
 // Create Structure
 struct Array
 {
-  
   int Size,Cnt,i,j,Ret;    // Size Is For Taking Size Of Array & Cnt is For Taking Count Of Elements
-
 }Obj;
   
 
@@ -24,7 +22,7 @@ void Accept_Array_Elements(int F_Arr[])
     So To Handle That Condition Need To Write If
  */
    
-  if(Obj.Cnt<=Obj.Size)
+  if(Obj.Cnt<=Obj.Size&&Obj.Cnt>0)
   {
     for(Obj.i=0;Obj.i<Obj.Cnt;Obj.i++)
      {
@@ -49,7 +47,7 @@ void Accept_Array_Elements(int F_Arr[])
   {
      printf("\n----------------------------------------------------------------");
      printf("\n\n**Element Count Must Be Less Than Or Equal To Size Of Array i.e %d\n",Obj.Size);
-     printf("\nSo,Please Enter Valid Element Count In Between (0-%d)...!**\n",Obj.Size);
+     printf("\nSo,Please Enter Valid Element Count In Between (1-%d)...!**\n",Obj.Size);
      printf("\n----------------------------------------------------------------\n\n");
      goto Up;
   }
@@ -197,7 +195,7 @@ int main()
   }  
  else
   {
-    printf("\nSize Must Be Positive Number & Greater Than 0\n");
+    printf("\n**Size Must Be Positive Number & Greater Than 0**\n");
     goto up;
   }
   

@@ -178,8 +178,7 @@ int main()
      printf("\n\n********************************************************************\n");
   
      Obj.Ret=Insert_New_Element(&Arr);         // Insert New Element In An Array
-
-     fflush(stdin);
+   
 
      if(Obj.Ret==0)        //   This Will Only Work When We Insert New Element Otherwise Not.
      { 

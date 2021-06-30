@@ -18,7 +18,7 @@ void Accept_Array_Elements(int F_Arr[])
     So To Handle That Condition Need To Write If
  */
    
-  if(Cnt<=Size)
+  if(Cnt<=Size&&Cnt>0)
   {
     for(i=0;i<Cnt;i++)
      {
@@ -43,7 +43,7 @@ void Accept_Array_Elements(int F_Arr[])
   {
      printf("\n----------------------------------------------------------------");
      printf("\n\n**Element Count Must Be Less Than Or Equal To Size Of Array i.e %d\n",Size);
-     printf("\nSo,Please Enter Valid Element Count In Between (0-%d)...!**\n",Size);
+     printf("\nSo,Please Enter Valid Element Count In Between (1-%d)...!**\n",Size);
      printf("\n----------------------------------------------------------------\n\n");
      goto Up;
   }
@@ -81,8 +81,16 @@ int Insert_New_Element(int f_Arr[])
       printf("\nWhere You Want To Insert Your New Element.Enter Index In Between(0-%d) : ",Size-1);
       scanf("%d",&Index);
 
-      if(Index>Size-1)
+      if(Index>Size-1||Index<0)
       {
+         if(Index<0)         // Handling Negative Input
+        {
+          printf("\n-------------------------------------------------------------\n");
+          printf("\nIndex Must Be In Positive Number.Enter Valid Index....!\n");
+          printf("\n-----------------------------------------------------------\n");
+          goto Up;
+        }
+
         printf("\n-----------------------------------\n");
         
         printf("\nPlease Enter Valid Index...!\n");
@@ -142,40 +150,51 @@ int main()
 {
   printf("************************************************************\n");
   
+  up:
   printf("\nEnter Size Of Array : ");
   scanf("%d",&Size);
 
-  int Arr[Size];    // Declaring/Creating & Initialising Array
+ if(Size>0)
+  {
+     int Arr[Size];    // Declaring/Creating & Initialising Array
 
-  Accept_Array_Elements(&Arr);     // Accept Array Elements
+     Accept_Array_Elements(&Arr);     // Accept Array Elements
 
-  printf("\n************************************************************\n");
+     printf("\n************************************************************\n");
   
-  printf("\nBack To main()...! Press Any Key\n");
+     printf("\nBack To main()...! Press Any Key\n");
 
-  getch();
+     getch();
   
-  printf("\n\n************************************************************\n");
+     printf("\n\n************************************************************\n");
 
-  Display_Array_Elements(&Arr);      // Display Array Elements
+     Display_Array_Elements(&Arr);      // Display Array Elements
 
-  printf("\n\n********************************************************************\n");
+     printf("\n\n********************************************************************\n");
   
-  Ret=Insert_New_Element(&Arr);         // Insert New Element In An Array
+     Ret=Insert_New_Element(&Arr);         // Insert New Element In An Array
 
-  fflush(stdin);
+     fflush(stdin);
 
-  if(Ret==0)        //   This Will Only Work When We Insert New Element Otherwise Not.
-  { 
-      printf("\n\n***********************************************************************\n");  
+     if(Ret==0)        //   This Will Only Work When We Insert New Element Otherwise Not.
+      { 
+          printf("\n\n***********************************************************************\n");  
+     
+          Display_Array_Elements(&Arr);    // Again Display Array Elements
+      }
   
-      Display_Array_Elements(&Arr);    // Again Display Array Elements
+     printf("\n*************************************************************\n");
+ 
+     printf("\n\nThanks....!!!\n");
+     
   }
-  
-  printf("\n*************************************************************\n");
-  
-  printf("\n\nThanks....!!!\n");
 
+ else
+ {
+     printf("\n**Size Must In Positive Number & Greater Than 0....!**\n");
+     goto up;
+ }
+ 
   getch();
   return 0;
 }

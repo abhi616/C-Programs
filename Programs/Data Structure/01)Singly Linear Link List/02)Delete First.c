@@ -14,12 +14,31 @@ void Display_LL(struct Node*);
 
 int main()
 {
-  struct Node *Head;
+  struct Node *Head = NULL;
+  
+  Delete_First(&Head);
+  printf("\n----------------------------------------\n");
   
   Insert_First(&Head,11);
   Insert_First(&Head,21);
+  
+  printf("\n----------------------------------------\n");
+ 
+  Display_LL(Head);
+  
+  printf("\n----------------------------------------\n");
+  
+  Delete_First(&Head);  
+  Display_LL(Head);
+  
+  printf("\n----------------------------------------\n");
+  
   Delete_First(&Head);
-  Delete_First(&Head);
+  Insert_First(&Head,51);
+  Insert_First(&Head,71);
+  Display_LL(Head);
+  
+  printf("\n----------------------------------------\n");
   return 0;
 }
 
@@ -44,7 +63,7 @@ void Insert_First(struct Node **First,int Ele)
    }
    else
    {
-     *First = NewN->Next;
+     NewN->Next=*First;
      *First = NewN;
    }
    
@@ -62,7 +81,7 @@ void Delete_First(struct Node **First)
      return;
    }
    
-   else if(Temp->Next == NULL)
+   if(Temp->Next == NULL)
    {
      *First = NULL;
    }
@@ -73,5 +92,29 @@ void Delete_First(struct Node **First)
    
    printf("\nRemoved Element From Link List Is %d\n",Temp->Data);
    free(Temp);
+   
    return;
 }
+
+
+void Display_LL(struct Node *First)
+{
+   if(First == NULL)
+   {
+     printf("\nLink List Is Empty.Can't Display Any Element.\n");    
+   }
+   else
+   {
+     printf("\nLink List Elements :\n\n");
+     for(;First!=NULL;First=First->Next)
+     {
+       printf("|%d|\n",First->Data);
+     }     
+     
+    }
+   
+   return;
+  
+}
+
+

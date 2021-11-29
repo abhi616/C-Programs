@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<conio.h>
 #include<string.h>
 
 int main()
@@ -278,6 +279,6 @@ int main()
         printf("\nEntered Strings:\n \"%s\" And \"%s\" Are Not Anagram Strings...",Str1,Str2);
       }
 
-
+      getch();
       return 0;
 }

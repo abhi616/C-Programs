@@ -1,3 +1,18 @@
+/*
+
+  Input :   Enter Count To Print Pattern : 7
+
+  Output :
+                * * * * * * *
+                *     *     *
+                *     *     *
+                * * * * * * *
+                *     *     *
+                *     *     *
+                * * * * * * *
+
+*/ 
+
 #include<stdio.h>
 #include<conio.h>
 

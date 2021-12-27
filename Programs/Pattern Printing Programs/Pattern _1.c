@@ -21,7 +21,7 @@ int main()
         int Cnt;
 
          Up:
-         printf("\n Enter Count To Print Pattern : ");
+         printf("\n Enter Odd Count To Print Pattern : ");
          scanf("%d",&Cnt);
 
 

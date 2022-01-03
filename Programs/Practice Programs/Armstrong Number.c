@@ -50,11 +50,10 @@ int main()
     while(Temp>0)
     {
         Rem = Temp%10;
-        Cube = Cube*Rem*Rem*Rem;
+        Cube = Rem*Rem*Rem;
 
         Res = Res + Cube;
         Temp/=10;
-        Cube = 1;
     }
 
     printf("\n--------------------------------------------------\n");

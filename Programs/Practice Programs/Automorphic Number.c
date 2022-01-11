@@ -53,7 +53,7 @@ int main()
     // Reverse Given Number Till Count
     for(int i=0;i<Cnt;Temp/=10,i++)
     {
-        Rem = Temp%10+Rem*10;
+        Rem = Temp%10 + Rem*10;
     }
 
     Temp = Rem;           // Take Value Of Rem Into Temp To Reverse Again
@@ -63,7 +63,7 @@ int main()
     // Reverse The Number Again To Check Whether It Is Equal With Entered Number Or Not
     for(;Temp>0;Temp/=10)
     {
-        Rem = Temp%10+Rem*10;
+        Rem = Temp%10 + Rem*10;
     }
 
 

@@ -22,6 +22,7 @@
 #include<conio.h>
 #include<stdlib.h>
 
+
 int main()
 {
       char Str[30],Ch,Str2[30];

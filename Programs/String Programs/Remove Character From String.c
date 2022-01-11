@@ -1,3 +1,23 @@
+/*
+
+     Input :
+
+                 Enter String : Hiieyi Hiiello
+
+                 Which Character You Want To Remove : i
+
+     Output :
+                ------------------------------------------------------------------
+
+                 After Removing 'i' From Entered String.
+
+                 Final String = Hey Hello
+
+                ------------------------------------------------------------------
+
+
+*/
+
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -12,7 +32,7 @@ int main()
 
       fflush(stdin);
 
-      printf("\n Which Charcter You Want To Remove : ");
+      printf("\n Which Character You Want To Remove : ");
       scanf("%c",&Ch);
 
       printf("\n------------------------------------------------------------------\n");

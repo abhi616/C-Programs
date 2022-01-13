@@ -1,7 +1,7 @@
 /*
 
       Input :
-                 Enter Number : 3
+                 Enter 1st Number : 3
 
                  Enter 2nd Number : 5
 
